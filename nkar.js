@@ -1,18 +1,8 @@
 const nkarner = [
     //tagavorner
     {
-        "nkar": "./images/Tigran_2.jpg",
-        "name": "Տիգրան 2_րդ Մեծ",
-        "tipe":"tagavor",
-    },
-    {
         "nkar": "./images/Pap.jpeg",
         "name": "Պապ",
-        "tipe":"tagavor",
-    },
-    {
-        "nkar": "./images/Gagik_1.jpg",
-        "name": "Գագիկ Առաջին",
         "tipe":"tagavor",
     },
     {
@@ -81,13 +71,13 @@ const nkarner = [
         "tipe":"tagavor",
     },
     {
-        "nkar": "./images/Serjik.jpeg",
+        "nkar": "./images/Serjik.jpg",
         "name": "Սերժ Առաջին",
         "tipe":"tagavor",
     },
     //taguhiner
     {
-        "nkar": "./images/Ekaterina_1.jpeg",
+        "nkar": "./images/Ekaterina_1.jpg",
         "name": "Եկատերինա Առաջին",
         "tipe":"taguhi",
     },
@@ -97,17 +87,17 @@ const nkarner = [
         "tipe":"taguhi",
     },
     {
-        "nkar": "./images/Elizaveta_1.jpeg",
+        "nkar": "./images/Elizaveta_1.jpg",
         "name": "Ելիզավետա Առաջին",
         "tipe":"taguhi",
     },
     {
-        "nkar": "./images/Elizaveta_2.jpeg",
+        "nkar": "./images/Elizaveta_2.jpg",
         "name":"Ելիզավետա 2_րդ ",
         "tipe":"taguhi",
     },
     {
-        "nkar": "./images/Epige.jpeg",
+        "nkar": "./images/Epige.jpg",
         "name": "Էպիգե",
         "tipe":"taguhi",
     },
