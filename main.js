@@ -1,111 +1,105 @@
+
 let correct;
-let second = 7
-let correctAnswer = 0
-let incorrectAnswer = 0
+let seconds = 10
+let correctAnswer = 0;
+let incorrectAnswer = 0;
 function getElement(id) {
     return document.getElementById(id);
 }
-function generateRandomTagavor() {
-    return nkarner[Math.floor(Math.random()*(nkarner.length - 1))]
+function getRandomCountry() {
+    return nkarner[Math.round(Math.random() * (nkarner.length - 1))];
 }
-
 function main() {
     let options = [];
-    let maxoption = 3;
-    while (options.length < maxoption) {
-        let tagav = generateRandomTagavor();
-        if (options.indexOf(tagav) === -1) {
-            options.push(tagav);
+    const maxOptions = 3;
+    while (options.length < maxOptions) {
+        let tag = getRandomCountry();
+        if (options.indexOf(tag) === -1) {
+            if (options.length == 0) {
+                options.push(tag);
+            } else if(options[0].tipe == tag.tipe) {
+                options.push(tag);
+            }
+
         }
     }
-    for (i = 0; i < options.length; i++) {
-        getElement(`option${i + 1}input`).innerHTML = options[i].name;
-        getElement(`option${i + 1}label`).value = options[i].name;
-        getElement(`option${i + 1}input`).checked = false
+    for (let i = 0; i < options.length; i++) {
+        getElement(`option${i + 1}label`).innerHTML = options[i].name;
+        getElement(`option${i + 1}input`).value = options[i].name;
+        getElement(`option${i + 1}input`).checked = false;
     }
-
-    correct = options[Math.round(Math.random() * (options.length-1))]
+    correct = options[Math.round(Math.random() * (options.length - 1))];
     getElement("tagavor").src = correct.nkar;
 }
 
 function timer() {
-    setTimeout(finish, second * 1000)
-    getElement("time").innerHTML = second;
+    setTimeout(finish, seconds * 1000);
+    getElement("time").innerHTML = seconds;
     let countdown = setInterval(function () {
-        second--;
-        getElement("time").textContent = second;
-        if (second <= 0) {
+        seconds--;
+        getElement("time").textContent = seconds;
+        if (seconds <= 0) {
             clearInterval(countdown);
         }
-        if (second === 7) {
+        if (seconds === 7) {
             getElement("time").style.color = "green";
         }
-        if (second === 5) {
+        if (seconds === 5) {
             getElement("time").style.color = "yellow";
         }
-        if (second === 3) {
+        if (seconds === 3) {
             getElement("time").style.color = "red";
         }
-    }, 1000)
-
+    }, 1000);
 }
 function check() {
     let input;
     try {
-        input = document.querySelector('input[name="option"]:checked').value;
+        input = document.querySelector('input[name = "option"]:checked').value;
     } catch {
         return;
     }
     if (input === correct.name) {
-        correctAnswer++
-        getElement("score").innerHTML = correctAnswer
+        correctAnswer++;
+        getElement("score").innerHTML = correctAnswer;
     } else {
-        incorrectAnswer++
+        incorrectAnswer++;
     }
     main();
 }
 
 
-
 function finish() {
-    {
-        clearInterval(checkInterval);
-        let partencage = Math.round((correctAnswer / (correctAnswer + incorrectAnswer))* 100);  
-        if (isNaN(partencage)) {
-            resultForAnswers = "duq patasxan chuneq";
-        } else {
-            if (partencage >= 75 && partencage <= 95) {
-                resultForAnswers = "duq cucabereciq lav ardyunq"
-            } else if (partencage >= 95) {
-                resultForAnswers = "duq cucabereciq gerazanc ardyunq"
-            }
-            getElement("alertaccuracy").innerHTML = ` duq vastakeciq${resultForAnswers}`
+    clearInterval(checkInterval);
+    getElement("alert").style.display = "block";
+    getElement("card").style.display = "none";
+    getElement("alertscore").innerHTML = correctAnswer;
+    let percentage = Math.round((correctAnswer / (correctAnswer + incorrectAnswer)) * 100);
+    if (isNaN(percentage)) {
+        resultForAnswers = 100;
+    } else {
+        if (percentage >= 75 && percentage < 95) {
+            resultForAnswers = "Դուք ցուցաբերել եք լավ արդյունք"
+        } else if (percentage >= 95) {
+            resultForAnswers = "Դուք ցուցաբերել եք գերազանց արդյունք "
+        } else if (percentage >= 50 && percentage < 75) {
+            resultForAnswers = "Դուք ցուցաբերել եք միջին արդյունք"
+        } else if (percentage >= 25 && percentage < 50) {
+            resultForAnswers = "Դուք ցուցաբերել եք միջինից վատ արդյունք"
+        } else if (percentage < 25) {
+            resultForAnswers = "Դուք ցուցաբերել եք վատ արդյունք"
         }
-
     }
+    getElement("alertaccuracy").innerHTML = `${resultForAnswers}  `;
 }
+
 function refresh() {
     location = location;
-
 }
+
 let checkInterval = setInterval(check, 50);
 main();
 timer();
-// {
-//     clearInterval(checkInterval);
-//     let partencage = Math.round((correctAnswer / (correctAnswer + incorrectAnswer)))
-//     if (isNaN(partencage)) {
-//         resultForAnswers = "duq patasxan chuneq";
-//     } else {
-//         if (partencage >= 75 && partencage <= 95) {
-//             resultForAnswers = "duq cucabereciq lav ardyunq"
-//         } else if (partencage >= 95) {
-//             resultForAnswers = "duq cucabereciq gerazanc ardyunq"
-//         }
-//         getElement("alertaccuracy").innerHTML = `${resultForAnswers}`
-//     }
-
-// }
 
 
 

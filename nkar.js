@@ -1,6 +1,11 @@
 const nkarner = [
     //tagavorner
     {
+        "nkar": "./images/Tigran_2.jpg",
+        "name": "Տիգրան 2_րդ Մեծ",
+        "tipe":"tagavor",
+    },
+    {
         "nkar": "./images/Pap.jpeg",
         "name": "Պապ",
         "tipe":"tagavor",
@@ -71,10 +76,51 @@ const nkarner = [
         "tipe":"tagavor",
     },
     {
-        "nkar": "./images/Serjik.jpg",
+        "nkar": "./images/Serjik.jpg",  
         "name": "Սերժ Առաջին",
         "tipe":"tagavor",
     },
+    {
+        "nkar": "./images/charles_4.jpg",  
+        "name": "Չարլես_4",
+        "tipe":"tagavor",
+    },
+    {
+        "nkar": "./images/Francis_1.jpg",  
+        "name": "Ֆրանցիս Առաջին",
+        "tipe":"tagavor",
+    },
+    {
+        "nkar": "./images/Henry_6.jpg",  
+        "name": "Հենրի_6",
+        "tipe":"tagavor",
+    },
+    {
+        "nkar": "./images/Luis_9.jpg",  
+        "name": "Լուիս_9",
+        "tipe":"tagavor",
+    },
+    {
+        "nkar": "./images/Luis_14.jpg",  
+        "name": "Լուիս_14",
+        "tipe":"tagavor",
+    },
+    {
+        "nkar": "./images/Robert_1.jpg",  
+        "name": "Ռոբերտ Առաջին",
+        "tipe":"tagavor",
+    },
+    {
+        "nkar": "./images/Philip_1.jpg",  
+        "name": "Ֆիլիպ Առաջին",
+        "tipe":"tagavor",
+    },
+    {
+        "nkar": "./images/Ferdinant_5.jpg",  
+        "name": "Ֆերդինանտ_5",
+        "tipe":"tagavor",
+    },
+    
     //taguhiner
     {
         "nkar": "./images/Ekaterina_1.jpg",
@@ -106,5 +152,19 @@ const nkarner = [
         "name": "Կլեոպատրա",
         "tipe":"taguhi",
     },
-
+    {
+        "nkar": "./images/Isabella_1a.jpg",  
+        "name": "Իզաբելլա առաջին",
+        "tipe":"taguhi",
+    },
+    {
+        "nkar": "./images/Isabella_2.jpg",  
+        "name": "Իզաբելլա_2",
+        "tipe":"taguhi",
+    },
+    {
+        "nkar": "./images/Joanna_1a.jpg",  
+        "name": "Ջոաննա առաջին",
+        "tipe":"taguhi",
+    },
 ]

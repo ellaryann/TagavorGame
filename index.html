@@ -10,6 +10,7 @@
     <h1>ԽԱՂ ԹԱԳԱՈՐՆԵՐԻ ՄԱՍԻՆ</h1>
 
 </head>
+
 <body>
     <section class="card" id="card">
         <section class="infobar">
@@ -28,22 +29,29 @@
             <section class="section" id="optionhalf">
                 <div class="options">
                     <div class="option">
-                        <input type="radio" name="option" id="option1input" class="optionradio" value="Տիգրան 2_րդ Մեծ">
-                        <label for="option1input" class="label" id="option1label">Տիգրան 2_րդ Մեծ</label>
+                        <input type="radio" value="" name="option" id="option1input" class="optionradio">
+                        <label for="option1input" class="label" id="option1label"></label>
                     </div>
                     <div class="option">
-                        <input type="radio" name="option" id="option2input" class="optionradio" value="Արշակ 2_րդ">
-                        <label for="option2input" class="label" id="option2label">Արշակ 2_րդ</label>
+                        <input type="radio" value="" name="option" id="option2input" class="optionradio">
+                        <label for="option2input" class="label" id="option2label"></label>
                     </div>
                     <div class="option">
-                        <input type="radio" name="option" id="option3input" class="optionradio" value="Աշոտ 2_րդ Երկաթ">
-                        <label for="option3input" class="label" id="option3label">Աշոտ 2_րդ Երկաթ</label>
+                        <input type="radio" value="" name="option" id="option3input" class="optionradio">
+                        <label for="option3input" class="label" id="option3label"></label>
                     </div>
-
                 </div>
             </section>
         </div>
     </section>
+    <section id="alert" class="card">
+        <div class="alerttext">Միավոր: <span id="alertscore"></span></div>
+        <div class="alerttext">Ճշգրտություն: <span id="alertaccuracy"></span></div>
+        <br>
+        <button onclick="refresh()" class="button">Վերսկսել</button>
+
+
+    </section>>
     <script src='nkar.js'></script>
     <script src='main.js'></script>
     
